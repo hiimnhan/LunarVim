@@ -19,7 +19,7 @@ lvim.plugins = {
   {
     "Exafunction/codeium.vim",
     config = function()
-      vim.keymap.set("i", "<Tab>", function()
+      vim.keymap.set("i", "<A-Tab>", function()
         return vim.fn["codeium#Accept"]()
       end, { expr = true })
       vim.keymap.set("i", "<C-j>", function()
