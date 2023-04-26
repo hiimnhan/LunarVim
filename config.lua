@@ -1,7 +1,7 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "tokyonight-night"
+lvim.colorscheme = "tokyonight-moon"
 -- lvim.builtin.terminal.open_mapping = "<C-T>"
 lvim.builtin.terminal.direction = "horizontal"
 -- keymappings [view all the defaults by pressing <leader>Lk]
