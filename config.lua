@@ -2,6 +2,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "tokyonight-moon"
+lvim.transparent_window = true
 -- lvim.builtin.terminal.open_mapping = "<C-T>"
 lvim.builtin.terminal.direction = "horizontal"
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -14,6 +15,7 @@ lvim.keys.normal_mode["<S-Tab>"] = ":BufferLineCyclePrev<CR>"
 
 lvim.builtin.which_key.mappings['F'] = { "<cmd>Telescope find_files hidden=true<CR>", "Find all files" }
 lvim.plugins = {
+  { "google/vim-jsonnet" },
   { "windwp/nvim-autopairs" },
   { "windwp/nvim-ts-autotag" },
   {
@@ -66,6 +68,13 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+}
+
+lvim.builtin.telescope.defaults = {
+  file_sorter = require('telescope.sorters').get_fuzzy_file,
+  prompt_prefix = '❯ ',
+  color_devicons = true,
+  path_display = 'absolute', -- Add this line
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
