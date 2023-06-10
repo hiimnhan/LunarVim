@@ -42,6 +42,15 @@ lvim.plugins = {
       return {}
     end,
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({
+        '*',
+        '!vim'
+      })
+    end
+  }
 }
 
 require "nvim-autopairs".setup({})
